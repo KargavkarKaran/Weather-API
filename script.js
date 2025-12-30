@@ -1,4 +1,4 @@
-const apiKey = '40868cb74d7181a85084572d6051309c'; // Replace with your OpenWeatherMap API key
+const apiKey = '40868cb74d7181a85084572d6051309c'; 
 const searchBtn = document.getElementById('searchBtn');
 const cityInput = document.getElementById('cityInput');
 const weatherResult = document.getElementById('weatherResult');
@@ -9,9 +9,7 @@ searchBtn.addEventListener('click', () => {
         alert('Please enter a city name');
         return;
     }
-
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
     fetch(url)
         .then(response => {
             if (!response.ok) {
